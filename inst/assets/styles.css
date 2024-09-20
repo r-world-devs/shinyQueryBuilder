@@ -1,0 +1,37 @@
+.shiny-querybuilder.disable-add-rules [data-add="rule"],
+.shiny-querybuilder.no-filters [data-add="rule"],
+.shiny-querybuilder.disable-add-groups [data-add="group"],
+.shiny-querybuilder.no-filters [data-add="group"],
+.shiny-querybuilder.disable-rm-rules [data-delete="rule"],
+.shiny-querybuilder.no-filters [data-delete="rule"],
+.shiny-querybuilder.disable-rm-groups [data-delete="group"],
+.shiny-querybuilder.no-filters [data-delete="group"]
+ {
+  display: none;
+}
+
+.shiny-querybuilder.disable-add-rules [data-add="group"] {
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 3px !important;
+}
+
+.shiny-querybuilder.disable-rm-groups [data-add="group"] {
+  border-top-right-radius: 3px !important;
+  border-bottom-right-radius: 3px !important;
+}
+
+.shiny-querybuilder.disable-add-groups.disable-rm-groups [data-add="rule"] {
+  border-top-right-radius: 3px !important;
+  border-bottom-right-radius: 3px !important;
+}
+
+.shiny-querybuilder.disable-add-rules.disable-add-groups [data-delete="group"] {
+  border-top-left-radius: 3px !important;
+  border-bottom-left-radius: 3px !important;
+}
+
+.shiny-querybuilder .rule-value-container input.form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
