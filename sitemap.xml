@@ -1,48 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/articles/validation.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/genQueryFilters.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/js.html</loc>
-  </url>
-  <url>
-    <loc>/reference/query-operators.html</loc>
-  </url>
-  <url>
-    <loc>/reference/queryBuilderInput.html</loc>
-  </url>
-  <url>
-    <loc>/reference/queryFilter.html</loc>
-  </url>
-  <url>
-    <loc>/reference/r_to_js_opt_type.html</loc>
-  </url>
-  <url>
-    <loc>/reference/shinyQueryBuilder-package.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/validation.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/genQueryFilters.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/js.html</loc></url>
+<url><loc>/reference/query-operators.html</loc></url>
+<url><loc>/reference/queryBuilderInput.html</loc></url>
+<url><loc>/reference/queryFilter.html</loc></url>
+<url><loc>/reference/r_to_js_opt_type.html</loc></url>
+<url><loc>/reference/shinyQueryBuilder-package.html</loc></url>
 </urlset>
+

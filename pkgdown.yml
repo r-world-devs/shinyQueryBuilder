@@ -1,7 +1,6 @@
 pandoc: 2.19.2
-pkgdown: 2.0.0
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   validation: validation.html
-last_built: 2024-09-23T10:52Z
-
+last_built: 2024-09-23T11:05Z
