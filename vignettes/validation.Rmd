@@ -22,7 +22,7 @@ Before the value is sent to Shiny server, rules provided by user are validated.
 Invalid configuration for the associated rule (e.g. between operator value exceeding valid bounds) is highlighted
 in the widget, what's more the value is not sent to the application server.
 
-![](man/sqb_validation.png)
+![](sqb_validation.png)
 
 Validation can be customized on filter level with `validate` argument, defines as a list of the following arguments:
 
@@ -39,7 +39,7 @@ queryFilter(
 )
 ```
 
-![](man/sqb_validation_format.gif)
+![](sqb_validation_format.gif)
 
 - `min`, `max` - minimum/maximum accepted value (for integer/numeric filters) or minimum/maximum character length (for character ones),
 - `step` - provided value precision (for integer/numeric filters). Accept only values that are multiplication of `step`.
@@ -53,14 +53,14 @@ queryFilter(
 )
 ```
 
-![](man/sqb_validation_min_max_step.gif)
+![](sqb_validation_min_max_step.gif)
 
 - `allow_empty_value` - `TRUE/FALSE` should empty user inputs for this filter allowed?
 
 - `messages` - message to be send to the user when input is not validated.
   Should be a list with keys being any of the above arguments. When the specific argument causes validation error, the corresponding message will be sent.
 
-```{r}
+```{r, eval = FALSE}
 queryFilter(
   "digit", type = "numeric",
   validation = list(
@@ -85,7 +85,7 @@ It must return `true` if the value is valid or an error string otherwise. The fu
 
 In order to define it, create the function definition as character string and pass it to `js` function:
 
-```{r}
+```{r, eval = FALSE}
 queryFilter(
   "fav_letter",
   type = "character",
@@ -103,8 +103,6 @@ queryFilter(
   )
 )
 ```
-
-![](man/sqb_validation_callback.gif)
 
 Check the below application to test validation cases:
 
