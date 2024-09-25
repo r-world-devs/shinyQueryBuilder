@@ -19,8 +19,8 @@
 #'   Available types are 'text', 'number', 'textarea', 'radio', 'checkbox' and 'select'.
 #'   It can also be a JS function which returns the HTML of the said input, this function takes 2 parameters:
 #'  \itemize{
-#'    \item{rule}{the Rule object}
-#'    \item{input_name}{the name of the input}
+#'    \item{\code{rule} - the Rule object}
+#'    \item{\code{input_name} - the name of the input}
 #'  }
 #' In order to define it, create the function definition as character string and pass it to \link{js}.
 #' When skipped, the default input will be used based on the provided \code{type}.
@@ -55,15 +55,15 @@
 #'   If provided the default function is not run.
 #'  The function takes 2 parameters:
 #'  \itemize{
-#'    \item{rule}{the Rule object}
-#'    \item{value}{}
+#'    \item{\code{rule} - the Rule object}
+#'    \item{\code{value}}
 #'  }
 #' In order to define it, create the function definition as character string and pass it to \link{js}.
 #' @param valueGetter (advanced) function  Function used to get the input(s) value.
 #'   If provided the default function is not run.
 #'   It takes 1 parameter:
 #'  \itemize{
-#'    \item{rule}{the Rule object}
+#'    \item{\code{rule} - the Rule object}
 #'  }
 #' In order to define it, create the function definition as character string and pass it to \link{js}.
 #' @param unique Allow to use the filter only once. Can be `FALSE/TRUE` or 'group' to allow using filter once per group.

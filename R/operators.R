@@ -14,14 +14,13 @@
 #'   See \link[queryBuilder]{query-operator}.
 #'
 #' @details
-#'
 #' When configuring a single query rule, user needs to precise three values in 'queryBuilderInput' interface:
 #' \itemize{
-#'   \item{1. field}{ Name of the field that can be interpreted as a filtered column name. Selected with dropdown.}
-#'   \item{2. operator}{
+#'   \item{1. field - Name of the field that can be interpreted as a filtered column name. Selected with dropdown.}
+#'   \item{2. operator -
 #'     Name of the operator to be applied to the field. Selected with dropdown.
 #'   }
-#'   \item{3. operator value(s)}{
+#'   \item{3. operator value(s) -
 #'     Value(s) that narrows down the operator definition.
 #'     Depending on the chosen operator, such input can be take through various kind of **input controllers**.
 #'   }
@@ -52,16 +51,16 @@
 #'
 #' A good practice is to configure your operators the following way:
 #' \itemize{
-#'   \item{nb_inputs = 0}{
+#'   \item{\code{nb_inputs = 0} - 
 #'     Operator associated function doesn't require any value, e.g. 'is_null' or 'is_empty' that only require
 #'     'field' name.
 #'    }
-#'   \item{nb_inputs = n, multiple = FALSE}{
+#'   \item{\code{nb_inputs = n, multiple = FALSE} - 
 #'     Operator associated function requires exactly `n` values, e.g. `n=2` for 'between' that requires
 #'     lower and upper bound to precise it.
 #'     As a result `n` separate input controllers will be rendered, each taking a single value.
 #'   }
-#'   \item{nb_inputs = 1, multiple = TRUE}{
+#'   \item{\code{nb_inputs = 1, multiple = TRUE} - 
 #'     Operator associated function accepts dynamic number of values, e.g. 'in'.
 #'     As a result one single input controller will be rendered, and operator will allow it to have multiple values set.
 #'   }

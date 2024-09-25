@@ -51,8 +51,8 @@ Available types are 'character', 'factor', 'integer', 'numeric', 'POSIXct', 'Dat
   Available types are 'text', 'number', 'textarea', 'radio', 'checkbox' and 'select'.
   It can also be a JS function which returns the HTML of the said input, this function takes 2 parameters:
  \itemize{
-   \item{rule}{the Rule object}
-   \item{input_name}{the name of the input}
+   \item{\code{rule} - the Rule object}
+   \item{\code{input_name} - the name of the input}
  }
 In order to define it, create the function definition as character string and pass it to \link{js}.
 When skipped, the default input will be used based on the provided \code{type}.}
@@ -102,8 +102,8 @@ element returned by \link{queryBuilderInput}. Use this to store any functional d
   If provided the default function is not run.
  The function takes 2 parameters:
  \itemize{
-   \item{rule}{the Rule object}
-   \item{value}{}
+   \item{\code{rule} - the Rule object}
+   \item{\code{value}}
  }
 In order to define it, create the function definition as character string and pass it to \link{js}.}
 
@@ -111,7 +111,7 @@ In order to define it, create the function definition as character string and pa
   If provided the default function is not run.
   It takes 1 parameter:
  \itemize{
-   \item{rule}{the Rule object}
+   \item{\code{rule} - the Rule object}
  }
 In order to define it, create the function definition as character string and pass it to \link{js}.}
 
