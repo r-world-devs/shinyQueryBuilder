@@ -9,6 +9,9 @@ js(x)
 \arguments{
 \item{x}{Character string containing valid JS object e.g. function}
 }
+\value{
+An object of class 'json' storing the provided character string.
+}
 \description{
 Store JS definition as character string
 }

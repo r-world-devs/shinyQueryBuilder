@@ -1,6 +1,6 @@
 Package: shinyQueryBuilder
 Type: Package
-Title: Construct Complex Filtering Queries in Shiny.
+Title: Construct Complex Filtering Queries in Shiny
 Version: 0.1.0
 Authors@R: c(
              person(
@@ -15,7 +15,7 @@ Authors@R: c(
              )
            )
 Maintainer: Krystian Igras <krystian8207@gmail.com>
-Description: The package provides an input widget that allows to construct complex filtering queries in 'Shiny'.
+Description: Shiny input widget that allows to construct complex filtering queries.
   It's a wrapper for JS library 'jQuery-QueryBuilder'.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -24,14 +24,14 @@ RoxygenNote: 7.3.1
 Depends:
     queryBuilder
 Imports:
+    rlang,
     R6,
     magrittr,
     jsonlite,
     htmltools,
     shiny,
     glue,
-    purrr,
-    shinyGizmo
+    purrr
 Collate:
     'shinyQueryBuilder-package.R'
     'query_builder_input.R'

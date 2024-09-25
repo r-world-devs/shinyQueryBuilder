@@ -19,6 +19,9 @@ For each variable the provided settings will overwrite the default ones.}
 \item{.queryBuilderConfig}{R6 object of class 'queryBuilderConfig' storing queryOperators.
 See \link[queryBuilder]{query-operator}.}
 }
+\value{
+Nested list object storing generated filters configuration.
+}
 \description{
 Generate filters definition
 }

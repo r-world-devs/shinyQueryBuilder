@@ -21,15 +21,11 @@ ui <- page_fluid(
       select_placeholder = "- - - - -",
       lang = list(operators = list("exclude" = "Exclude"))
     ),
-    shinyGizmo::valueButton("oko", "Oko", "#query"),
     actionButton("update", "Update")
   )
 )
 
 server <- function(input, output, session) {
-  observeEvent(input$oko, {
-    print(input$oko)
-  })
   observeEvent(input$query, {
     print(queryToExpr(input$query))
   })

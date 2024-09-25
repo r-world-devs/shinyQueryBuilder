@@ -71,6 +71,7 @@ get_data_setting <- function(data, .queryBuilderConfig) {
 #'   )
 #' )
 #'
+#' @return Nested list object storing generated filters configuration.
 #' @export
 genQueryFilters <- function(data, settings = list(), .queryBuilderConfig = queryBuilder::queryBuilderConfig) {
   purrr::imap(

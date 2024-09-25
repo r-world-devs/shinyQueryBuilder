@@ -90,7 +90,7 @@ adding a rule.}
 \item{lang}{Nested named list providing language translations for selected controller labels.
 See \url{https://github.com/mistic100/jQuery-QueryBuilder/blob/dev/src/i18n/en.json} for the required structure,
 or load one of the existing files included at
-\url{https://github.com/mistic100/jQuery-QueryBuilder/blob/dev/src/i18n}.}
+\url{https://github.com/mistic100/jQuery-QueryBuilder/tree/dev/src/i18n}.}
 
 \item{plugins}{List of plugins names used for the widget. See \url{https://querybuilder.js.org/plugins.html}.}
 
@@ -102,6 +102,10 @@ or load one of the existing files included at
 See \link[queryBuilder]{query-operator}.}
 
 \item{session}{Shiny session object.}
+}
+\value{
+Nested list of `shiny.tag` objects, defining html structure of the input,
+or no value in case of usage of `updateQueryBuilderInput` method.
 }
 \description{
 Generate Shiny Query Widget
@@ -117,7 +121,10 @@ ui <- shiny::fluidPage(
         values = levels(iris$Species), multiple = TRUE,
         optgroup = "char_fields"
       ),
-      queryFilter("Sepal.Length", type = "numeric", values = range(iris$Sepal.Length), optgroup = "num_fields")
+      queryFilter(
+        "Sepal.Length", type = "numeric", 
+        values = range(iris$Sepal.Length), optgroup = "num_fields"
+      )
     ),
     rules = queryGroup(
       condition = "AND",

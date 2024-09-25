@@ -439,13 +439,8 @@
     "queryBuilder": {
       "Package": "queryBuilder",
       "Version": "0.1.0",
-      "Source": "GitHub",
-      "RemoteType": "github",
-      "RemoteHost": "api.github.com",
-      "RemoteUsername": "r-world-devs",
-      "RemoteRepo": "queryBuilder",
-      "RemoteRef": "master",
-      "RemoteSha": "ae9d4198ce760515be2854ea6beb3cc5e53c2f57",
+      "Source": "Repository",
+      "Repository": "CRAN",
       "Requirements": [
         "dplyr",
         "glue",
@@ -454,7 +449,7 @@
         "rlang",
         "utils"
       ],
-      "Hash": "37998126f433e94d57e8628ee5eeebb1"
+      "Hash": "d512ed2cb4dbbb7b4a5884f4e009876a"
     },
     "rappdirs": {
       "Package": "rappdirs",

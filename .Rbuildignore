@@ -4,3 +4,5 @@
 ^\.Rproj\.user$
 examples/*
 .lintr
+README.Rmd
+docs

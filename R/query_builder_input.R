@@ -37,7 +37,7 @@
 #' @param lang Nested named list providing language translations for selected controller labels.
 #'   See \url{https://github.com/mistic100/jQuery-QueryBuilder/blob/dev/src/i18n/en.json} for the required structure,
 #'   or load one of the existing files included at
-#'   \url{https://github.com/mistic100/jQuery-QueryBuilder/blob/dev/src/i18n}.
+#'   \url{https://github.com/mistic100/jQuery-QueryBuilder/tree/dev/src/i18n}.
 #' @param plugins List of plugins names used for the widget. See \url{https://querybuilder.js.org/plugins.html}.
 #' @param .queryBuilderConfig R6 object of class 'queryBuilderConfig' storing queryOperators.
 #'   See \link[queryBuilder]{query-operator}.
@@ -53,7 +53,10 @@
 #'         values = levels(iris$Species), multiple = TRUE,
 #'         optgroup = "char_fields"
 #'       ),
-#'       queryFilter("Sepal.Length", type = "numeric", values = range(iris$Sepal.Length), optgroup = "num_fields")
+#'       queryFilter(
+#'         "Sepal.Length", type = "numeric", 
+#'         values = range(iris$Sepal.Length), optgroup = "num_fields"
+#'       )
 #'     ),
 #'     rules = queryGroup(
 #'       condition = "AND",
@@ -70,6 +73,8 @@
 #'   shiny::runApp(ui, server)
 #' }
 #'
+#' @return Nested list of `shiny.tag` objects, defining html structure of the input,
+#' or no value in case of usage of `updateQueryBuilderInput` method.
 #' @export
 queryBuilderInput <- function(inputId,
                               filters, rules = list(), operators = NULL, optgroups, default_filter,
@@ -214,6 +219,7 @@ input_handler <- function(x, shinysession, name) {
 
 #' Store JS definition as character string
 #' @param x Character string containing valid JS object e.g. function
+#' @return An object of class 'json' storing the provided character string.
 #' @export
 js <- function(x) {
   class(x) <- "json"

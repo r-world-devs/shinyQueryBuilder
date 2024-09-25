@@ -152,7 +152,7 @@ The initiated state can be then customized by user when needed.
 ![](man/figures/sqb_restate.gif)
 
 See more examples at
-[examples](https://github.com/r-world-devs/shinyQueryBuilder/-/tree/master/examples?ref_type=heads).
+[examples](https://github.com/r-world-devs/shinyQueryBuilder/tree/master/examples).
 
 ## Installation
 

@@ -91,7 +91,10 @@
 #' listMappedOperators()
 #'
 #' filters = list(
-#'   queryFilter("Sepal.Length", operators = c("within", "less"), type = "numeric", values = range(iris$Sepal.Length)),
+#'   queryFilter(
+#'     "Sepal.Length", operators = c("within", "less"), 
+#'     type = "numeric", values = range(iris$Sepal.Length)
+#'   ),
 #'   # no operators set, means take all for "character"
 #'   queryFilter("Species", type = "character", values = levels(iris$Species))
 #' )
@@ -116,6 +119,7 @@
 #' }
 #'
 #' @name query-operators
+#' @return No return value, called for side effects.
 #' @export
 mapOperator <- function(name, apply_to, optgroup = "basic", nb_inputs = 1, multiple = FALSE,
                         .queryBuilderConfig = queryBuilder::queryBuilderConfig) {
@@ -173,6 +177,7 @@ input_type_mappers <- list(
 #' @param r_class Optional R class to list operators assigned to it.
 #'   When skipped all the mapped operators will be summed up.
 #' @param print Should the operators summary be printed?
+#' @return List of operators registered within \code{.queryBuilderConfig}.
 #' @rdname query-operators
 listMappedOperators <- function(r_class, print = TRUE, .queryBuilderConfig = queryBuilder::queryBuilderConfig) {
   mapped_operators <- .queryBuilderConfig$get_from_private("gui_operators")
@@ -181,7 +186,9 @@ listMappedOperators <- function(r_class, print = TRUE, .queryBuilderConfig = que
   if (!missing(r_class)) {
     mapped_operators <- mapped_operators %>% purrr::keep(~ r_class %in% .x$apply_to_r_class)
   }
+  output_fun <- I
   if (print) {
+    output_fun <- invisible
     mapped_operators %>%
       purrr::imap(
         ~cat(
@@ -196,5 +203,5 @@ listMappedOperators <- function(r_class, print = TRUE, .queryBuilderConfig = que
       )
   }
 
-  return(invisible(mapped_operators))
+  return(output_fun(mapped_operators))
 }

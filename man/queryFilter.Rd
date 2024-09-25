@@ -119,6 +119,9 @@ In order to define it, create the function definition as character string and pa
 In order to make it work please enable 'unique-filter' plugin (`plugin = list("unique-filter")`)
 for \link{queryBuilderInput}.}
 }
+\value{
+A list object storing the filter created filter configuration.
+}
 \description{
 Filters are responsible for defining available options for providing field-rules in the interface.
 With filters you may decide what operators should be available for the field,

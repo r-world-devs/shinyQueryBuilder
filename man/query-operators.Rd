@@ -45,6 +45,11 @@ When skipped all the mapped operators will be summed up.}
 
 \item{print}{Should the operators summary be printed?}
 }
+\value{
+No return value, called for side effects.
+
+List of operators registered within \code{.queryBuilderConfig}.
+}
 \description{
 Configure available user interface operators
 }
@@ -125,7 +130,10 @@ mapOperator(
 listMappedOperators()
 
 filters = list(
-  queryFilter("Sepal.Length", operators = c("within", "less"), type = "numeric", values = range(iris$Sepal.Length)),
+  queryFilter(
+    "Sepal.Length", operators = c("within", "less"), 
+    type = "numeric", values = range(iris$Sepal.Length)
+  ),
   # no operators set, means take all for "character"
   queryFilter("Species", type = "character", values = levels(iris$Species))
 )

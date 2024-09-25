@@ -94,6 +94,7 @@
 #' }
 #'
 #' @seealso \link[queryBuilder]{queryRule}
+#' @return A list object storing the filter created filter configuration.
 #' @export
 queryFilter <- function(id, field, label, optgroup, type, input, values, value_separator, default_value,
                         input_event, size, rows, multiple, placeholder, vertical, validation, operators,
